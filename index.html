@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Engenharia de Software — Código que transforma ideias em soluções</title>
+  <meta name="description" content="Engenharia de Software para a Feira de Profissões: o que é a profissão, como um software é construído, áreas de atuação, formação e mercado de trabalho.">
+  <meta name="theme-color" content="#f7f4ec">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <!-- Fontes gratuitas (Google Fonts). Sem internet, o CSS usa fontes de reserva. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&amp;family=Instrument+Serif:ital@0;1&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="js/navigation.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/interactions.js" defer></script>
+</head>
+<body class="page page--index">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header" id="topo">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html" aria-current="page">
+        <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect x="1.5" y="1.5" width="29" height="29" rx="9" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 11l-5 5 5 5M20 11l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="16" r="2.2" fill="var(--sage-600)"/></svg>
+        <span class="brand__name">Engenharia <em>de Software</em></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle__icon" aria-hidden="true"></span>
+        <span class="nav-toggle__text">Menu</span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
+        <ul class="site-nav__list">
+          <li class="site-nav__home"><a href="index.html" aria-current="page">Início</a></li>
+          <li><a href="pages/profissao.html">Profissão</a></li>
+          <li><a href="pages/historia.html">História</a></li>
+          <li><a href="pages/areas.html">Áreas</a></li>
+          <li><a href="pages/desenvolvimento.html">Como se constrói</a></li>
+          <li><a href="pages/formacao.html">Formação</a></li>
+          <li><a href="pages/mercado.html">Mercado</a></li>
+          <li><a href="pages/stand.html">Stand</a></li>
+          <li><a href="pages/creditos.html">Créditos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <p class="eyebrow">Feira de Profissões</p>
+          <h1 class="hero__title" id="hero-title">Engenharia <em>de Software</em></h1>
+          <p class="hero__slogan">Código que transforma ideias em soluções.</p>
+          <p class="hero__lede">É a área que planeja, constrói, testa e mantém os sistemas digitais que usamos todos os dias, do aplicativo do banco ao prontuário de um hospital, com método, cuidado e trabalho em equipe.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="pages/profissao.html">Conhecer a profissão</a>
+            <a class="btn btn--quiet" href="pages/areas.html">Explorar as áreas de atuação</a>
+          </div>
+        </div>
+
+        <figure class="hero__visual" aria-labelledby="hero-fig">
+          <svg class="system-sketch" viewBox="0 0 440 360" role="img" aria-labelledby="hero-fig-title">
+            <title id="hero-fig-title">Esboço de um sistema: a pessoa usuária interage com a interface, que conversa com as regras do sistema, que guardam informações em um banco de dados.</title>
+            <g class="sketch__lines">
+              <path d="M108 72 C 160 72, 170 128, 214 128"/>
+              <path d="M286 150 C 330 150, 330 210, 300 236"/>
+              <path d="M214 258 C 160 258, 150 300, 108 300"/>
+              <path class="sketch__loop" d="M70 280 C 30 230, 30 130, 70 96" />
+            </g>
+            <g class="sketch__nodes">
+              <rect x="22" y="48" width="96" height="48" rx="14"/>
+              <rect x="214" y="104" width="120" height="48" rx="14"/>
+              <rect x="190" y="234" width="130" height="48" rx="14"/>
+              <rect x="22" y="276" width="96" height="48" rx="14"/>
+            </g>
+            <g class="sketch__labels">
+              <text x="70" y="77">pessoa</text>
+              <text x="274" y="133">interface</text>
+              <text x="255" y="263">regras</text>
+              <text x="70" y="305">dados</text>
+              <text x="50" y="196" class="sketch__note">feedback</text>
+            </g>
+            <circle class="sketch__dot" cx="214" cy="128" r="4"/>
+            <circle class="sketch__dot" cx="300" cy="236" r="4"/>
+            <circle class="sketch__dot" cx="108" cy="300" r="4"/>
+          </svg>
+          <div class="code-card" aria-hidden="true">
+<pre><code><span class="c">// da ideia à solução</span>
+<span class="k">function</span> <span class="f">resolver</span>(problema) {
+  <span class="k">const</span> requisitos = <span class="f">entender</span>(problema);
+  <span class="k">return</span> <span class="f">construir</span>(requisitos)
+    .<span class="f">testar</span>()
+    .<span class="f">entregar</span>();
+}</code></pre>
+          </div>
+          <figcaption id="hero-fig" class="hero__caption">Ilustração criada para este projeto: um sistema é feito de partes que conversam entre si.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- EM UMA FRASE -->
+    <section class="section section--tight" aria-labelledby="frase-title">
+      <div class="container narrow">
+        <p class="eyebrow">Em uma frase</p>
+        <h2 id="frase-title" class="h2 h2--statement reveal">Programar é escrever código. Engenharia de software é garantir que esse código <em>resolva o problema certo</em>, funcione bem e continue funcionando.</h2>
+        <p class="note reveal"><span class="note__tag">nota</span> Por isso a profissão envolve tanto conversar com pessoas e organizar requisitos quanto escrever, testar e revisar código.</p>
+      </div>
+    </section>
+
+    <!-- ÁREAS -->
+    <section class="section" aria-labelledby="areas-home-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Áreas de atuação</p>
+          <h2 id="areas-home-title" class="h2">Muitos caminhos dentro de um mesmo ofício</h2>
+          <p class="section-head__lede">Alguns exemplos. A página de áreas apresenta dez delas, e há outras possibilidades além dessas.</p>
+        </header>
+        <ul class="topic-list reveal">
+          <li><a href="pages/areas.html#frontend"><span class="topic-list__name">Frontend</span><span class="topic-list__desc">Interfaces que as pessoas veem e usam no navegador.</span></a></li>
+          <li><a href="pages/areas.html#backend"><span class="topic-list__name">Backend</span><span class="topic-list__desc">Regras, dados e serviços que funcionam por trás das telas.</span></a></li>
+          <li><a href="pages/areas.html#mobile"><span class="topic-list__name">Desenvolvimento mobile</span><span class="topic-list__desc">Aplicativos para celulares e tablets.</span></a></li>
+          <li><a href="pages/areas.html#ia"><span class="topic-list__name">Inteligência artificial</span><span class="topic-list__desc">Sistemas que aprendem padrões a partir de dados.</span></a></li>
+          <li><a href="pages/areas.html#seguranca"><span class="topic-list__name">Cibersegurança</span><span class="topic-list__desc">Proteção de sistemas, dados e pessoas.</span></a></li>
+        </ul>
+        <p class="more-link reveal"><a href="pages/areas.html">Ver as dez áreas <span aria-hidden="true">→</span></a></p>
+      </div>
+    </section>
+
+    <!-- PROCESSO -->
+    <section class="section section--sage" aria-labelledby="processo-home-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Processo</p>
+          <h2 id="processo-home-title" class="h2">Como uma ideia vira um produto digital</h2>
+          <p class="section-head__lede">O ciclo de vida do software organiza o trabalho em etapas que se repetem e se melhoram a cada versão.</p>
+        </header>
+        <ol class="flow reveal" aria-label="Etapas do ciclo de vida do software">
+          <li><span class="flow__no">01</span>Problema</li>
+          <li><span class="flow__no">02</span>Requisitos</li>
+          <li><span class="flow__no">03</span>Planejamento</li>
+          <li><span class="flow__no">04</span>Arquitetura</li>
+          <li><span class="flow__no">05</span>Desenvolvimento</li>
+          <li><span class="flow__no">06</span>Testes</li>
+          <li><span class="flow__no">07</span>Implantação</li>
+          <li><span class="flow__no">08</span>Manutenção</li>
+        </ol>
+        <p class="more-link reveal"><a href="pages/desenvolvimento.html">Ver o exemplo interativo <span aria-hidden="true">→</span></a></p>
+      </div>
+    </section>
+
+    <!-- INDICADORES -->
+    <section class="section" aria-labelledby="indicadores-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Mercado</p>
+          <h2 id="indicadores-title" class="h2">Três números para começar</h2>
+          <p class="section-head__lede">Cada número mede uma coisa diferente. Os detalhes e a metodologia estão na página de mercado.</p>
+        </header>
+        <div class="figures reveal">
+          <article class="figure-stat">
+            <p class="figure-stat__value">R$ 7.500</p>
+            <p class="figure-stat__label">mediana mensal do salário de <strong>contratação CLT</strong> de engenheiros de software no Brasil</p>
+            <p class="figure-stat__src">72.340 admissões, set/2025 a ago/2026 · Novo CAGED/MTE, compilação Recoloca</p>
+          </article>
+          <article class="figure-stat">
+            <p class="figure-stat__value">494.427</p>
+            <p class="figure-stat__label">profissionais de TI com vínculo CLT no <strong>setor de TIC</strong> em 2025, não apenas engenheiros de software</p>
+            <p class="figure-stat__src">Brasscom, Relatório Setorial 2025</p>
+          </article>
+          <article class="figure-stat">
+            <p class="figure-stat__value">US$ 67,8 bi</p>
+            <p class="figure-stat__label">movimentados pelo <strong>mercado brasileiro de TI</strong> em 2025, alta de 18,5% sobre 2024</p>
+            <p class="figure-stat__src">Estudo ABES/IDC, divulgado em 01/04/2026</p>
+          </article>
+        </div>
+        <p class="more-link reveal"><a href="pages/mercado.html">Entender os dados do mercado <span aria-hidden="true">→</span></a></p>
+      </div>
+    </section>
+
+    <!-- STAND -->
+    <section class="section section--tight" aria-labelledby="stand-home-title">
+      <div class="container">
+        <div class="invite reveal">
+          <div>
+            <p class="eyebrow">Nosso stand</p>
+            <h2 id="stand-home-title" class="h2">Venha conversar com a gente na Feira de Profissões</h2>
+            <p>Depois do evento, esta página vai reunir os registros reais da nossa participação.</p>
+          </div>
+          <a class="btn btn--primary" href="pages/stand.html">Conhecer o stand</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__about">
+          <a class="brand brand--footer" href="index.html">
+            <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect x="1.5" y="1.5" width="29" height="29" rx="9" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 11l-5 5 5 5M20 11l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="16" r="2.2" fill="var(--sage-600)"/></svg>
+            <span class="brand__name">Engenharia <em>de Software</em></span>
+          </a>
+          <p class="site-footer__slogan">Código que transforma ideias em soluções.</p>
+          <p class="site-footer__note">Projeto escolar desenvolvido para a Feira de Profissões.</p>
+        </div>
+        <nav class="site-footer__nav" aria-label="Páginas do site">
+          <p class="eyebrow">Páginas</p>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="pages/profissao.html">Profissão</a></li>
+            <li><a href="pages/historia.html">História</a></li>
+            <li><a href="pages/areas.html">Áreas</a></li>
+            <li><a href="pages/desenvolvimento.html">Como se constrói</a></li>
+            <li><a href="pages/formacao.html">Formação</a></li>
+            <li><a href="pages/mercado.html">Mercado</a></li>
+            <li><a href="pages/stand.html">Stand</a></li>
+            <li><a href="pages/creditos.html">Créditos</a></li>
+          </ul>
+        </nav>
+        <div class="site-footer__sources">
+          <p class="eyebrow">Sobre os dados</p>
+          <p>Todas as estatísticas indicam fonte, período e metodologia. A lista completa está em <a href="pages/creditos.html">Créditos e referências</a>.</p>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <p>Conteúdo revisado em 11/11/2026.</p>
+        <a class="site-footer__top" href="#topo">Voltar ao topo <span aria-hidden="true">↑</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" aria-label="Voltar ao topo da página" hidden>
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+  </button>
+
+</body>
+</html>

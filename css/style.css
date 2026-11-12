@@ -1,0 +1,224 @@
+/* ==========================================================================
+   ENGENHARIA DE SOFTWARE — style.css
+   Base do site: variáveis, tipografia, layout, cabeçalho e rodapé.
+   Identidade: minimalista e serena — marfim, verde sálvia, azul petróleo e grafite.
+   ========================================================================== */
+
+/* ---------- 1. VARIÁVEIS ---------- */
+:root {
+  /* Cores de fundo */
+  --ivory: #f7f4ec;          /* fundo principal (branco quente) */
+  --paper: #fcfaf5;          /* superfícies levemente elevadas */
+  --line: #e3ddcf;           /* linhas finas */
+  --line-strong: #cec6b5;
+
+  /* Verde sálvia e verde acinzentado */
+  --sage-50: #eef1e9;
+  --sage-100: #e2e8da;
+  --sage-200: #ccd6c3;
+  --sage-400: #a2b298;
+  --sage-600: #758a6d;
+  --sage-700: #566a50;       /* sálvia para texto (contraste ≥ 4,5:1 no marfim) */
+  --grey-green: #8a978f;
+  --grey-green-700: #4f5c55;
+
+  /* Azul petróleo suave */
+  --petrol: #2e6670;         /* destaques e links (contraste ≈ 5,9:1 no marfim) */
+  --petrol-700: #234f57;
+  --petrol-100: #dce8e7;
+
+  /* Grafite */
+  --graphite: #2a2d2c;       /* texto principal */
+  --muted: #5a605c;          /* texto secundário (contraste ≈ 5,7:1) */
+
+  /* Tipografia */
+  --f-display: "Instrument Serif", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --f-body: "Figtree", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+
+  /* Espaçamento e medidas */
+  --gutter: clamp(1.25rem, 5vw, 3rem);
+  --max-w: 1180px;
+  --narrow-w: 760px;
+  --section-y: clamp(4rem, 9vw, 7.5rem);
+  --radius: 14px;
+  --header-h: 4.5rem;
+  --ease: cubic-bezier(0.25, 0.6, 0.3, 1);
+}
+
+/* ---------- 2. BASE ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: calc(var(--header-h) + 1rem); }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+
+body {
+  margin: 0;
+  background: var(--ivory);
+  color: var(--graphite);
+  font-family: var(--f-body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img, svg, video { display: block; max-width: 100%; }
+h1, h2, h3, h4, p, ul, ol, dl, dd, figure { margin: 0; }
+ul, ol { list-style: none; padding: 0; }
+button, input, select { font: inherit; color: inherit; }
+table { border-collapse: collapse; width: 100%; }
+p + p { margin-top: 1em; }
+strong { font-weight: 600; }
+
+a { color: var(--petrol); text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
+a:hover { color: var(--petrol-700); text-decoration-thickness: 2px; }
+
+:focus-visible { outline: 2px solid var(--petrol); outline-offset: 3px; border-radius: 4px; }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+.skip-link {
+  position: absolute; left: 1rem; top: -4rem; z-index: 200;
+  padding: 0.7rem 1rem; border-radius: 999px;
+  background: var(--graphite); color: var(--ivory); text-decoration: none;
+}
+.skip-link:focus { top: 1rem; }
+
+/* ---------- 3. TIPOGRAFIA ---------- */
+h1, h2, .h2, .h3 { font-family: var(--f-display); font-weight: 400; letter-spacing: -0.01em; color: var(--graphite); }
+h1 em, h2 em, .h2 em, .h3 em { font-style: italic; color: var(--petrol); }
+.h2, h2.h2 { font-size: clamp(2rem, 4.4vw, 3.25rem); line-height: 1.1; max-width: 22ch; }
+.h3 { font-size: clamp(1.6rem, 3vw, 2.2rem); line-height: 1.15; margin-bottom: 1rem; }
+.h3--spaced { margin-top: 2.5rem; }
+h3 { font-size: 1.15rem; font-weight: 600; line-height: 1.35; }
+
+.eyebrow {
+  font-family: var(--f-mono); font-size: 0.75rem; font-weight: 500;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--sage-700);
+  margin-bottom: 1rem;
+}
+
+/* ---------- 4. LAYOUT ---------- */
+.container { width: min(100% - 2 * var(--gutter), var(--max-w)); margin-inline: auto; }
+.narrow { max-width: var(--narrow-w); }
+.container.narrow { width: min(100% - 2 * var(--gutter), var(--narrow-w)); }
+
+.section { padding-block: var(--section-y); }
+.section--tight { padding-block: clamp(2.5rem, 6vw, 4.5rem); }
+.section--sage { background: var(--sage-50); border-block: 1px solid var(--sage-100); }
+
+.section-head { display: grid; gap: 0.25rem; margin-bottom: clamp(2rem, 5vw, 3.5rem); }
+.section-head__lede { color: var(--muted); max-width: 58ch; margin-top: 0.75rem; }
+
+.split { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr); gap: clamp(2rem, 6vw, 5rem); align-items: start; }
+.split__main p { max-width: 62ch; }
+
+/* Cabeçalho das páginas internas */
+.page-head { padding-block: clamp(3.5rem, 9vw, 6.5rem) clamp(1rem, 3vw, 2rem); }
+.page-head__title { font-size: clamp(2.6rem, 6.4vw, 4.6rem); line-height: 1.04; max-width: 16ch; }
+.page-head__lede { margin-top: 1.5rem; font-size: clamp(1.1rem, 1.8vw, 1.3rem); color: var(--muted); max-width: 54ch; line-height: 1.55; }
+
+/* ---------- 5. CABEÇALHO E MENU ---------- */
+.site-header {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(247, 244, 236, 0.9);
+  -webkit-backdrop-filter: saturate(1.2) blur(10px); backdrop-filter: saturate(1.2) blur(10px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s var(--ease);
+}
+.site-header.is-scrolled { border-bottom-color: var(--line); }
+.site-header__inner { height: var(--header-h); display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; }
+
+.brand { display: inline-flex; align-items: center; gap: 0.7rem; color: var(--graphite); text-decoration: none; }
+.brand:hover { color: var(--graphite); }
+.brand__mark { width: 2rem; height: 2rem; color: var(--petrol); flex: none; }
+.brand__name { font-family: var(--f-display); font-size: 1.3rem; line-height: 1; white-space: nowrap; }
+.brand__name em { font-style: italic; color: var(--petrol); }
+
+.site-nav__list { display: flex; align-items: center; gap: clamp(0.4rem, 1.3vw, 1.4rem); }
+.site-nav__home { display: none; }
+.site-nav a {
+  position: relative; display: inline-block; padding: 0.4rem 0.1rem;
+  color: var(--graphite); text-decoration: none; font-size: 0.94rem;
+}
+.site-nav a::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0.1rem; height: 1px;
+  background: currentColor; transform: scaleX(0); transform-origin: left; transition: transform 0.3s var(--ease);
+}
+.site-nav a:hover::after { transform: scaleX(1); }
+.site-nav a[aria-current="page"] { color: var(--petrol); }
+.site-nav a[aria-current="page"]::after { transform: scaleX(1); height: 2px; }
+
+.nav-toggle {
+  display: none; align-items: center; gap: 0.6rem; min-height: 2.75rem; padding: 0 1rem;
+  background: transparent; border: 1px solid var(--line-strong); border-radius: 999px; cursor: pointer;
+  font-size: 0.9rem;
+}
+.nav-toggle__icon, .nav-toggle__icon::before, .nav-toggle__icon::after {
+  display: block; width: 16px; height: 1.5px; background: currentColor; position: relative; transition: transform 0.3s var(--ease), background 0.2s;
+}
+.nav-toggle__icon::before, .nav-toggle__icon::after { content: ""; position: absolute; left: 0; }
+.nav-toggle__icon::before { top: -5px; }
+.nav-toggle__icon::after { top: 5px; }
+.site-header.is-open .nav-toggle__icon { background: transparent; }
+.site-header.is-open .nav-toggle__icon::before { transform: translateY(5px) rotate(45deg); }
+.site-header.is-open .nav-toggle__icon::after { transform: translateY(-5px) rotate(-45deg); }
+
+/* ---------- 6. RODAPÉ ---------- */
+.site-footer { margin-top: clamp(3rem, 7vw, 6rem); border-top: 1px solid var(--line); background: var(--paper); padding-block: clamp(3rem, 7vw, 5rem) 2rem; }
+.site-footer__grid { display: grid; grid-template-columns: 1.4fr 1fr 1.2fr; gap: clamp(2rem, 5vw, 4rem); }
+.site-footer__slogan { font-family: var(--f-display); font-style: italic; font-size: 1.35rem; margin-top: 1.25rem; color: var(--graphite); }
+.site-footer__note { margin-top: 0.5rem; color: var(--muted); font-size: 0.95rem; }
+.site-footer__nav ul { columns: 2; column-gap: 1.5rem; }
+.site-footer__nav li { padding: 0.2rem 0; break-inside: avoid; }
+.site-footer__nav a { color: var(--graphite); text-decoration: none; font-size: 0.95rem; }
+.site-footer__nav a:hover { color: var(--petrol); text-decoration: underline; }
+.site-footer__sources p:not(.eyebrow) { color: var(--muted); font-size: 0.95rem; }
+.site-footer__bottom {
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem;
+  margin-top: clamp(2.5rem, 5vw, 4rem); padding-top: 1.5rem; border-top: 1px solid var(--line);
+  font-size: 0.88rem; color: var(--muted);
+}
+.site-footer__top { color: var(--graphite); text-decoration: none; }
+.site-footer__top:hover { color: var(--petrol); }
+
+/* ---------- 7. RESPONSIVIDADE DA BASE ---------- */
+@media (max-width: 1100px) {
+  /* backdrop-filter prenderia o painel fixo à altura do cabeçalho: no menu móvel, fundo sólido */
+  .site-header { -webkit-backdrop-filter: none; backdrop-filter: none; background: var(--ivory); }
+  .nav-toggle { display: inline-flex; }
+  html:not(.js) .nav-toggle { display: none; }
+  .site-nav {
+    position: fixed; left: 0; right: 0; top: var(--header-h); bottom: 0;
+    background: var(--ivory); padding: 1.5rem var(--gutter) 3rem; overflow-y: auto;
+    opacity: 0; visibility: hidden; transform: translateY(-6px);
+    transition: opacity 0.3s var(--ease), transform 0.3s var(--ease), visibility 0.3s;
+  }
+  .site-header.is-open .site-nav { opacity: 1; visibility: visible; transform: none; }
+  .site-nav__list { flex-direction: column; align-items: stretch; gap: 0; max-width: 32rem; }
+  .site-nav__home { display: block; }
+  .site-nav li { border-bottom: 1px solid var(--line); }
+  .site-nav a { display: block; padding: 1rem 0; font-family: var(--f-display); font-size: 1.75rem; }
+  .site-nav a::after { display: none; }
+  html.nav-open, html.nav-open body { overflow: hidden; }
+
+  /* Sem JavaScript, o menu aparece sempre, em linha */
+  html:not(.js) .site-header { position: static; }
+  html:not(.js) .site-header__inner { height: auto; flex-wrap: wrap; padding-block: 1rem; }
+  html:not(.js) .site-nav { position: static; opacity: 1; visibility: visible; transform: none; padding: 0; background: none; }
+  html:not(.js) .site-nav__list { flex-direction: row; flex-wrap: wrap; gap: 0.25rem 1rem; }
+  html:not(.js) .site-nav li { border: 0; }
+  html:not(.js) .site-nav a { font-family: var(--f-body); font-size: 0.95rem; padding: 0.25rem 0; }
+}
+
+@media (max-width: 860px) {
+  .split { grid-template-columns: minmax(0, 1fr); }
+  .site-footer__grid { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (max-width: 420px) {
+  .brand__name { font-size: 1.12rem; }
+  .nav-toggle__text { display: none; }
+  .nav-toggle { padding: 0 0.85rem; }
+}

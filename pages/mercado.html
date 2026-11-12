@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mercado de trabalho · Engenharia de Software</title>
+  <meta name="description" content="Salários de contratação de engenheiros de software no Brasil e no Paraná e indicadores do setor de TIC, com fontes e metodologia.">
+  <meta name="theme-color" content="#f7f4ec">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+  <!-- Fontes gratuitas (Google Fonts). Sem internet, o CSS usa fontes de reserva. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&amp;family=Instrument+Serif:ital@0;1&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="../js/navigation.js" defer></script>
+  <script src="../js/main.js" defer></script>
+  <script src="../js/interactions.js" defer></script>
+</head>
+<body class="page page--mercado">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header" id="topo">
+    <div class="container site-header__inner">
+      <a class="brand" href="../index.html">
+        <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect x="1.5" y="1.5" width="29" height="29" rx="9" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 11l-5 5 5 5M20 11l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="16" r="2.2" fill="var(--sage-600)"/></svg>
+        <span class="brand__name">Engenharia <em>de Software</em></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle__icon" aria-hidden="true"></span>
+        <span class="nav-toggle__text">Menu</span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
+        <ul class="site-nav__list">
+          <li class="site-nav__home"><a href="../index.html">Início</a></li>
+          <li><a href="../pages/profissao.html">Profissão</a></li>
+          <li><a href="../pages/historia.html">História</a></li>
+          <li><a href="../pages/areas.html">Áreas</a></li>
+          <li><a href="../pages/desenvolvimento.html">Como se constrói</a></li>
+          <li><a href="../pages/formacao.html">Formação</a></li>
+          <li><a href="../pages/mercado.html" aria-current="page">Mercado</a></li>
+          <li><a href="../pages/stand.html">Stand</a></li>
+          <li><a href="../pages/creditos.html">Créditos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <header class="page-head">
+      <div class="container narrow">
+        <p class="eyebrow">Mercado de trabalho</p>
+        <h1 class="page-head__title">Números com <em>contexto</em></h1>
+        <p class="page-head__lede">Dados oficiais e de entidades do setor, sempre com período e fonte. Cada indicador mede uma coisa diferente: leia as observações antes de comparar.</p>
+      </div>
+    </header>
+
+    <!-- SALÁRIOS DE CONTRATAÇÃO -->
+    <section class="section section--tight" aria-labelledby="salarios-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Engenheiro de software</p>
+          <h2 id="salarios-title" class="h2">Salário de contratação CLT</h2>
+          <p class="section-head__lede">Mediana do salário mensal registrado nas admissões com carteira assinada, de setembro de 2025 a agosto de 2026.</p>
+        </header>
+
+        <div class="figures figures--two reveal">
+          <article class="figure-stat" aria-labelledby="br-t">
+            <h3 class="figure-stat__place" id="br-t">Brasil</h3>
+            <p class="figure-stat__value">R$ 7.500</p>
+            <p class="figure-stat__label">mediana mensal na contratação</p>
+            <dl class="figure-stat__meta">
+              <div><dt>Metade das contratações</dt><dd>entre R$ 4.400 e R$ 11.320</dd></div>
+              <div><dt>Amostra</dt><dd>72.340 admissões</dd></div>
+            </dl>
+          </article>
+          <article class="figure-stat" aria-labelledby="pr-t">
+            <h3 class="figure-stat__place" id="pr-t">Paraná</h3>
+            <p class="figure-stat__value">R$ 5.740</p>
+            <p class="figure-stat__label">mediana mensal na contratação</p>
+            <dl class="figure-stat__meta">
+              <div><dt>Metade das contratações</dt><dd>entre R$ 3.640 e R$ 9.540</dd></div>
+              <div><dt>Amostra</dt><dd>3.590 admissões</dd></div>
+            </dl>
+          </article>
+        </div>
+
+        <figure class="chart reveal" data-chart aria-labelledby="c1-title">
+          <figcaption class="chart__head">
+            <h3 id="c1-title">Brasil e Paraná lado a lado</h3>
+            <p>A faixa mostra onde ficou a metade central das contratações; o traço escuro marca a mediana.</p>
+          </figcaption>
+          <div class="range-chart" role="img" aria-label="Brasil: mediana de R$ 7.500, metade das contratações entre R$ 4.400 e R$ 11.320. Paraná: mediana de R$ 5.740, metade das contratações entre R$ 3.640 e R$ 9.540.">
+            <div class="range-row">
+              <p class="range-row__label">Brasil</p>
+              <div class="track"><span class="range-bar" style="--from:36.667%; --width:57.667%"></span><span class="range-median" style="--at:62.5%"></span></div>
+              <p class="range-row__values">R$ 4.400 · <strong>R$ 7.500</strong> · R$ 11.320</p>
+            </div>
+            <div class="range-row">
+              <p class="range-row__label">Paraná</p>
+              <div class="track"><span class="range-bar" style="--from:30.333%; --width:49.167%"></span><span class="range-median" style="--at:47.833%"></span></div>
+              <p class="range-row__values">R$ 3.640 · <strong>R$ 5.740</strong> · R$ 9.540</p>
+            </div>
+            <div class="axis" aria-hidden="true"><span>R$ 0</span><span>R$ 4 mil</span><span>R$ 8 mil</span><span>R$ 12 mil</span></div>
+          </div>
+          <p class="source">Fonte: <a href="https://recoloca.me/salario/engenheiro-de-software" target="_blank" rel="noopener noreferrer">Novo CAGED/MTE, compilação Recoloca<span class="sr-only"> (abre em nova aba)</span></a>, atualização de 26/10/2026. Valores em reais, por mês.</p>
+        </figure>
+
+        <figure class="chart reveal" data-chart aria-labelledby="c2-title">
+          <figcaption class="chart__head">
+            <h3 id="c2-title">A idade pesa: mediana por faixa etária</h3>
+            <p>O CAGED não registra anos de experiência; a idade na contratação é só uma pista. Mesmo assim, ajuda a mostrar que o início de carreira costuma pagar menos.</p>
+          </figcaption>
+          <div class="bar-chart" role="img" aria-label="Mediana do salário de contratação por idade, Brasil. 18 a 24 anos: R$ 4.190. 25 a 29 anos: R$ 7.000. 30 a 39 anos: R$ 9.000. 40 a 49 anos: R$ 10.000. 50 anos ou mais: R$ 10.000.">
+            <div class="bar-row"><p class="bar-row__label">18 a 24 anos</p><div class="track"><span class="bar bar--accent" style="--w:34.917%"></span></div><p class="bar-row__value">R$ 4.190</p></div>
+            <div class="bar-row"><p class="bar-row__label">25 a 29 anos</p><div class="track"><span class="bar" style="--w:58.333%"></span></div><p class="bar-row__value">R$ 7.000</p></div>
+            <div class="bar-row"><p class="bar-row__label">30 a 39 anos</p><div class="track"><span class="bar" style="--w:75%"></span></div><p class="bar-row__value">R$ 9.000</p></div>
+            <div class="bar-row"><p class="bar-row__label">40 a 49 anos</p><div class="track"><span class="bar" style="--w:83.333%"></span></div><p class="bar-row__value">R$ 10.000</p></div>
+            <div class="bar-row"><p class="bar-row__label">50 anos ou mais</p><div class="track"><span class="bar" style="--w:83.333%"></span></div><p class="bar-row__value">R$ 10.000</p></div>
+            <div class="axis axis--bars" aria-hidden="true"><span>R$ 0</span><span>R$ 4 mil</span><span>R$ 8 mil</span><span>R$ 12 mil</span></div>
+          </div>
+          <p class="source">Brasil, admissões CLT de setembro de 2025 a agosto de 2026. Fonte: <a href="https://recoloca.me/salario/engenheiro-de-software" target="_blank" rel="noopener noreferrer">Novo CAGED/MTE, compilação Recoloca<span class="sr-only"> (abre em nova aba)</span></a>.</p>
+        </figure>
+      </div>
+    </section>
+
+    <!-- TRÊS NÚMEROS DIFERENTES -->
+    <section class="section section--sage" aria-labelledby="tres-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Atenção às comparações</p>
+          <h2 id="tres-title" class="h2">Três valores que não medem a mesma coisa</h2>
+        </header>
+        <div class="three reveal">
+          <article>
+            <p class="three__kind">Salário de contratação</p>
+            <p class="three__value">R$ 7.500</p>
+            <p>Mediana das admissões CLT de engenheiros de software no Brasil, set/2025 a ago/2026.</p>
+            <p class="source">Novo CAGED/MTE, compilação Recoloca.</p>
+          </article>
+          <article>
+            <p class="three__kind">Remuneração média do segmento</p>
+            <p class="three__value">R$ 6.591</p>
+            <p>Salário <strong>médio</strong> de 2025 de todos os empregados CLT do segmento de Software (empresas de software), não só de engenheiros.</p>
+            <p class="source">Brasscom, Relatório Setorial 2025.</p>
+          </article>
+          <article>
+            <p class="three__kind">Salário anunciado em vagas</p>
+            <p class="three__value">R$ 9.500</p>
+            <p>Mediana das 99 vagas de engenheiro de software do Recoloca que publicavam salário quando consultadas. É o anúncio, não a contratação registrada.</p>
+            <p class="source">Recoloca, consulta em 11/11/2026.</p>
+          </article>
+        </div>
+        <p class="note reveal"><span class="note__tag">nota</span> Mediana e média são medidas diferentes, de populações diferentes. Por isso esses valores não devem ser comparados como se fossem a mesma estatística.</p>
+      </div>
+    </section>
+
+    <!-- SETOR TIC -->
+    <section class="section" aria-labelledby="tic-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Contexto do setor</p>
+          <h2 id="tic-title" class="h2">Quem trabalha com TI no setor de TIC</h2>
+          <p class="section-head__lede">Em 2025, o setor de TIC tinha 494.427 profissionais de TI com vínculo CLT. Estes números descrevem o setor inteiro, e não apenas engenheiros de software.</p>
+        </header>
+
+        <figure class="chart reveal" data-chart aria-labelledby="c3-title">
+          <figcaption class="chart__head">
+            <h3 id="c3-title">Profissionais de TI por grupo de ocupação, 2025</h3>
+            <p>Participação no total de 494.427 vínculos CLT.</p>
+          </figcaption>
+          <div class="stack" role="img" aria-label="Distribuição dos profissionais de TI no setor de TIC em 2025: desenvolvimento de sistemas 58,8%; infraestrutura 13,2%; suporte de TI 9,9%; redes 8,3%; manutenção e reparação 5,9%; outros 2,4%; técnicos de telecomunicação 1,6%.">
+            <div class="stack__bar">
+              <span class="stack__seg stack__seg--1" style="--w:58.8%"></span>
+              <span class="stack__seg stack__seg--2" style="--w:13.2%"></span>
+              <span class="stack__seg stack__seg--3" style="--w:9.9%"></span>
+              <span class="stack__seg stack__seg--4" style="--w:8.3%"></span>
+              <span class="stack__seg stack__seg--5" style="--w:5.9%"></span>
+              <span class="stack__seg stack__seg--6" style="--w:2.4%"></span>
+              <span class="stack__seg stack__seg--7" style="--w:1.6%"></span>
+            </div>
+            <ul class="stack__legend">
+              <li><span class="swatch swatch--1" aria-hidden="true"></span>Desenvolvimento de sistemas <strong>58,8%</strong> <small>290.591</small></li>
+              <li><span class="swatch swatch--2" aria-hidden="true"></span>Infraestrutura <strong>13,2%</strong> <small>65.212</small></li>
+              <li><span class="swatch swatch--3" aria-hidden="true"></span>Suporte de TI <strong>9,9%</strong> <small>48.881</small></li>
+              <li><span class="swatch swatch--4" aria-hidden="true"></span>Redes <strong>8,3%</strong> <small>41.089</small></li>
+              <li><span class="swatch swatch--5" aria-hidden="true"></span>Manutenção e reparação <strong>5,9%</strong> <small>29.293</small></li>
+              <li><span class="swatch swatch--6" aria-hidden="true"></span>Outros <strong>2,4%</strong> <small>11.694</small></li>
+              <li><span class="swatch swatch--7" aria-hidden="true"></span>Técnicos de telecomunicação <strong>1,6%</strong> <small>7.667</small></li>
+            </ul>
+          </div>
+          <p class="source">Fonte: <a href="https://brasscom.org.br/wp-content/uploads/2026/05/BRI2-2026-001-Relatorio-Setorial-2025-versao-resumida-v5-SITE-2.pdf" target="_blank" rel="noopener noreferrer">Brasscom, Relatório Setorial 2025 — Macrossetor de TIC (PDF)<span class="sr-only"> (abre em nova aba)</span></a>, com dados da RAIS e do Novo Caged.</p>
+        </figure>
+
+        <figure class="chart reveal" data-chart aria-labelledby="c4-title">
+          <figcaption class="chart__head">
+            <h3 id="c4-title">Mercado brasileiro de TI</h3>
+            <p>US$ 67,8 bilhões movimentados em 2025, com o Brasil na 10ª posição mundial. O ritmo projetado para 2026 é bem menor.</p>
+          </figcaption>
+          <div class="bar-chart bar-chart--short" style="--ticks:2" role="img" aria-label="Crescimento do mercado brasileiro de TI: 18,5% em 2025 em relação a 2024; projeção de 5,3% para 2026.">
+            <div class="bar-row"><p class="bar-row__label">2025 (realizado)</p><div class="track"><span class="bar bar--accent" style="--w:92.5%"></span></div><p class="bar-row__value">+18,5%</p></div>
+            <div class="bar-row"><p class="bar-row__label">2026 (projeção)</p><div class="track"><span class="bar bar--ghost" style="--w:26.5%"></span></div><p class="bar-row__value">+5,3%</p></div>
+            <div class="axis axis--bars" aria-hidden="true"><span>0%</span><span>10%</span><span>20%</span></div>
+          </div>
+          <p class="source">Fonte: <a href="https://abes.org.br/wp-content/uploads/2026/04/Abes-Informa-2026-04-01.pdf" target="_blank" rel="noopener noreferrer">ABES Informa, 01/04/2026, estudo ABES/IDC (PDF)<span class="sr-only"> (abre em nova aba)</span></a>.</p>
+        </figure>
+      </div>
+    </section>
+
+    <!-- REALIDADE -->
+    <section class="section section--tight" aria-labelledby="realidade-title">
+      <div class="container narrow">
+        <p class="eyebrow">Sem promessas</p>
+        <h2 id="realidade-title" class="h2 reveal">Há oportunidades, mas nenhum diploma garante emprego automaticamente.</h2>
+        <ul class="facts reveal">
+          <li>Quem tem 18 a 24 anos foi contratado com mediana de <strong>R$ 4.190</strong>, bem abaixo da mediana geral (Recoloca/CAGED).</li>
+          <li>Em 2025, <strong>57%</strong> do aumento de profissionais no macrossetor de TIC veio de MEIs e trabalhadores informais, e não de empregos CLT, segundo a Brasscom: as relações de trabalho estão mudando.</li>
+          <li>A projeção de crescimento do mercado de TI para 2026 (5,3%) é menor que a de 2025 (18,5%), segundo a ABES.</li>
+        </ul>
+        <p class="reveal">Estágios, projetos práticos, portfólio e formação continuada fazem diferença na entrada na carreira.</p>
+      </div>
+    </section>
+
+    <!-- COMO LER -->
+    <section class="section section--tight" aria-labelledby="ler-title">
+      <div class="container narrow">
+        <div class="note note--block reveal">
+          <span class="note__tag">como ler estes dados</span>
+          <h2 id="ler-title" class="h3">Metodologia em poucas linhas</h2>
+          <ul class="tick-list">
+            <li><strong>Mediana</strong> é o valor do meio: metade ganhou menos, metade ganhou mais. Não é média.</li>
+            <li>Os salários de contratação vêm de <strong>admissões CLT</strong> com jornada de 30 horas semanais ou mais, sem contratos intermitentes, parciais ou de aprendiz. Não incluem PJ, autônomos nem servidores estatutários.</li>
+            <li>São <strong>salários de entrada</strong> no emprego, não a remuneração de quem já trabalha há anos, nem garantia de remuneração individual.</li>
+            <li>Dados da Brasscom e da ABES descrevem o <strong>setor de TIC</strong> e o mercado de TI, não a profissão isoladamente.</li>
+            <li>Não apresentamos estatísticas específicas de Curitiba.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <nav class="page-next container" aria-label="Próxima página">
+      <a href="../pages/stand.html"><span class="page-next__label">Próxima página</span><span class="page-next__title">Nosso stand <span aria-hidden="true">→</span></span></a>
+    </nav>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__about">
+          <a class="brand brand--footer" href="../index.html">
+            <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect x="1.5" y="1.5" width="29" height="29" rx="9" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 11l-5 5 5 5M20 11l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="16" r="2.2" fill="var(--sage-600)"/></svg>
+            <span class="brand__name">Engenharia <em>de Software</em></span>
+          </a>
+          <p class="site-footer__slogan">Código que transforma ideias em soluções.</p>
+          <p class="site-footer__note">Projeto escolar desenvolvido para a Feira de Profissões.</p>
+        </div>
+        <nav class="site-footer__nav" aria-label="Páginas do site">
+          <p class="eyebrow">Páginas</p>
+          <ul>
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="../pages/profissao.html">Profissão</a></li>
+            <li><a href="../pages/historia.html">História</a></li>
+            <li><a href="../pages/areas.html">Áreas</a></li>
+            <li><a href="../pages/desenvolvimento.html">Como se constrói</a></li>
+            <li><a href="../pages/formacao.html">Formação</a></li>
+            <li><a href="../pages/mercado.html">Mercado</a></li>
+            <li><a href="../pages/stand.html">Stand</a></li>
+            <li><a href="../pages/creditos.html">Créditos</a></li>
+          </ul>
+        </nav>
+        <div class="site-footer__sources">
+          <p class="eyebrow">Sobre os dados</p>
+          <p>Todas as estatísticas indicam fonte, período e metodologia. A lista completa está em <a href="../pages/creditos.html">Créditos e referências</a>.</p>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <p>Conteúdo revisado em 11/11/2026.</p>
+        <a class="site-footer__top" href="#topo">Voltar ao topo <span aria-hidden="true">↑</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" aria-label="Voltar ao topo da página" hidden>
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+  </button>
+
+</body>
+</html>

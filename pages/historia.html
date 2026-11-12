@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>História · Engenharia de Software</title>
+  <meta name="description" content="Linha do tempo da Engenharia de Software: dos primeiros computadores à conferência da OTAN de 1968, internet, nuvem, DevOps e inteligência artificial.">
+  <meta name="theme-color" content="#f7f4ec">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+  <!-- Fontes gratuitas (Google Fonts). Sem internet, o CSS usa fontes de reserva. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&amp;family=Instrument+Serif:ital@0;1&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="../js/navigation.js" defer></script>
+  <script src="../js/main.js" defer></script>
+  <script src="../js/interactions.js" defer></script>
+</head>
+<body class="page page--historia">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header" id="topo">
+    <div class="container site-header__inner">
+      <a class="brand" href="../index.html">
+        <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect x="1.5" y="1.5" width="29" height="29" rx="9" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 11l-5 5 5 5M20 11l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="16" r="2.2" fill="var(--sage-600)"/></svg>
+        <span class="brand__name">Engenharia <em>de Software</em></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle__icon" aria-hidden="true"></span>
+        <span class="nav-toggle__text">Menu</span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
+        <ul class="site-nav__list">
+          <li class="site-nav__home"><a href="../index.html">Início</a></li>
+          <li><a href="../pages/profissao.html">Profissão</a></li>
+          <li><a href="../pages/historia.html" aria-current="page">História</a></li>
+          <li><a href="../pages/areas.html">Áreas</a></li>
+          <li><a href="../pages/desenvolvimento.html">Como se constrói</a></li>
+          <li><a href="../pages/formacao.html">Formação</a></li>
+          <li><a href="../pages/mercado.html">Mercado</a></li>
+          <li><a href="../pages/stand.html">Stand</a></li>
+          <li><a href="../pages/creditos.html">Créditos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <header class="page-head">
+      <div class="container narrow">
+        <p class="eyebrow">História</p>
+        <h1 class="page-head__title">De cabos e chaves à <em>engenharia</em> de sistemas</h1>
+        <p class="page-head__lede">A programação começou com os primeiros computadores. A Engenharia de Software surgiu depois, quando os sistemas ficaram grandes demais para serem feitos sem método.</p>
+      </div>
+    </header>
+
+    <section class="section section--tight" aria-labelledby="linha-title">
+      <div class="container timeline-layout">
+        <aside class="timeline-index" aria-labelledby="linha-title">
+          <h2 id="linha-title" class="timeline-index__title">Linha do tempo</h2>
+          <ol class="timeline-index__list">
+            <li><a href="#marco-1">Primeiros computadores</a></li>
+            <li><a href="#marco-2">Mais complexidade</a></li>
+            <li><a href="#marco-3">Crise do software</a></li>
+            <li><a href="#marco-4">Garmisch, 1968</a></li>
+            <li><a href="#marco-5">Métodos de engenharia</a></li>
+            <li><a href="#marco-6">Estruturada e OO</a></li>
+            <li><a href="#marco-7">Internet e web</a></li>
+            <li><a href="#marco-8">Web e celulares</a></li>
+            <li><a href="#marco-9">Computação em nuvem</a></li>
+            <li><a href="#marco-10">DevOps e IA</a></li>
+          </ol>
+        </aside>
+
+        <ol class="timeline" data-timeline>
+          <li class="milestone" id="marco-1">
+            <div class="milestone__mark" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><rect x="10" y="16" width="44" height="32" rx="4"/><path d="M18 26v12M26 26v12M34 26v12M42 26v12M18 32h24"/></svg>
+            </div>
+            <div class="milestone__body">
+              <p class="milestone__period">Anos 1940 e 1950</p>
+              <h3>Primeiros computadores e programação</h3>
+              <p>O ENIAC, nos Estados Unidos, ficou pronto em meados da década de 1940 e é considerado o primeiro computador eletrônico digital programável de uso geral. Mudar seu programa exigia reconfigurar cabos e chaves. Em seguida vieram as máquinas de programa armazenado, que guardavam instruções na memória.</p>
+              <button class="milestone__more" type="button" aria-expanded="false" aria-controls="mais-1">Por que importa</button>
+              <p class="milestone__extra" id="mais-1" hidden>Programar já existia desde esses primeiros computadores: a Engenharia de Software não inventou a programação, ela veio organizar o trabalho quando ele cresceu.</p>
+              <p class="source">Fonte: <a href="https://www.britannica.com/technology/ENIAC" target="_blank" rel="noopener noreferrer">Encyclopaedia Britannica — ENIAC<span class="sr-only"> (abre em nova aba)</span></a></p>
+            </div>
+          </li>
+
+          <li class="milestone" id="marco-2">
+            <div class="milestone__mark" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><rect x="8" y="10" width="16" height="12" rx="3"/><rect x="40" y="10" width="16" height="12" rx="3"/><rect x="24" y="40" width="16" height="12" rx="3"/><path d="M16 22v8h32v-8M32 30v10"/></svg>
+            </div>
+            <div class="milestone__body">
+              <p class="milestone__period">Anos 1960</p>
+              <h3>Sistemas cada vez mais complexos</h3>
+              <p>Computadores mais potentes passaram a executar programas muito maiores, como sistemas operacionais e aplicações para empresas e governos. Projetos com muitas pessoas e milhares de linhas de código ficaram difíceis de coordenar.</p>
+              <button class="milestone__more" type="button" aria-expanded="false" aria-controls="mais-2">Por que importa</button>
+              <p class="milestone__extra" id="mais-2" hidden>O tamanho mudou a natureza do problema: além de escrever código, era preciso dividir o trabalho, comunicar decisões e controlar mudanças.</p>
+              <p class="source">Fonte: <a href="https://arxiv.org/pdf/1805.02742" target="_blank" rel="noopener noreferrer">Brian Randell — Fifty Years of Software Engineering (Newcastle University)<span class="sr-only"> (abre em nova aba)</span></a></p>
+            </div>
+          </li>
+
+          <li class="milestone" id="marco-3">
+            <div class="milestone__mark" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><path d="M10 50h44M14 50V20M14 24c10 0 12 8 20 8s10 10 18 10" /><path d="M42 14l8 8M50 14l-8 8"/></svg>
+            </div>
+            <div class="milestone__body">
+              <p class="milestone__period">Fim dos anos 1960</p>
+              <h3>A “crise do software”</h3>
+              <p>Muitos projetos atrasavam, estouravam o orçamento ou eram entregues com falhas. Esse quadro ficou conhecido como “crise do software”, expressão discutida por pioneiros como Edsger Dijkstra em sua palestra do Prêmio Turing de 1972.</p>
+              <button class="milestone__more" type="button" aria-expanded="false" aria-controls="mais-3">Por que importa</button>
+              <p class="milestone__extra" id="mais-3" hidden>A crise mostrou que talento individual não bastava: eram necessários métodos, processos e formação específica.</p>
+              <p class="source">Fontes:
+                <a href="https://amturing.acm.org/award_winners/dijkstra_1053701" target="_blank" rel="noopener noreferrer">ACM — Edsger W. Dijkstra, Prêmio Turing<span class="sr-only"> (abre em nova aba)</span></a> ·
+                <a href="https://www.cs.utexas.edu/~EWD/transcriptions/EWD03xx/EWD340.html" target="_blank" rel="noopener noreferrer">Dijkstra — The Humble Programmer (1972)<span class="sr-only"> (abre em nova aba)</span></a></p>
+            </div>
+          </li>
+
+          <li class="milestone milestone--key" id="marco-4">
+            <div class="milestone__mark" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="20"/><path d="M32 18v14l9 6"/></svg>
+            </div>
+            <div class="milestone__body">
+              <p class="milestone__period">Outubro de 1968 · marco central</p>
+              <h3>Conferência da OTAN em Garmisch</h3>
+              <p>De 7 a 11 de outubro de 1968, em Garmisch, na Alemanha, o Comitê de Ciência da OTAN reuniu mais de 50 especialistas de 11 países para discutir os problemas do desenvolvimento de software. O título escolhido, “Software Engineering”, era um termo praticamente desconhecido na época e sinalizava a ideia de tratar software com a disciplina de uma engenharia.</p>
+              <p>O relatório do encontro, editado por Peter Naur e Brian Randell, tornou-se uma referência histórica. Uma segunda conferência foi realizada em Roma, em 1969.</p>
+              <button class="milestone__more" type="button" aria-expanded="false" aria-controls="mais-4">Por que importa</button>
+              <p class="milestone__extra" id="mais-4" hidden>A conferência não marca o início da programação, que já existia havia mais de duas décadas. Ela é um marco para a consolidação da Engenharia de Software como disciplina.</p>
+              <p class="source">Fontes:
+                <a href="https://arxiv.org/pdf/1805.02742" target="_blank" rel="noopener noreferrer">Brian Randell — Fifty Years of Software Engineering<span class="sr-only"> (abre em nova aba)</span></a> ·
+                <a href="http://homepages.cs.ncl.ac.uk/brian.randell/NATO" target="_blank" rel="noopener noreferrer">Relatórios das conferências da OTAN (Newcastle University)<span class="sr-only"> (abre em nova aba)</span></a></p>
+            </div>
+          </li>
+
+          <li class="milestone" id="marco-5">
+            <div class="milestone__mark" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><rect x="8" y="10" width="20" height="10" rx="2"/><rect x="22" y="26" width="20" height="10" rx="2"/><rect x="36" y="42" width="20" height="10" rx="2"/><path d="M28 15h4v11M42 31h4v11"/></svg>
+            </div>
+            <div class="milestone__body">
+              <p class="milestone__period">Anos 1970 e 1980</p>
+              <h3>Métodos de engenharia se consolidam</h3>
+              <p>Ganharam força os modelos de processo em etapas, as técnicas de análise e projeto de sistemas, a gestão de projetos de software e as normas de qualidade. A área passou a ser ensinada e pesquisada em universidades.</p>
+              <button class="milestone__more" type="button" aria-expanded="false" aria-controls="mais-5">Por que importa</button>
+              <p class="milestone__extra" id="mais-5" hidden>Muitos conceitos usados até hoje, como requisitos, especificação, revisão e testes sistemáticos, foram organizados nesse período.</p>
+              <p class="source">Fonte: <a href="https://arxiv.org/pdf/1805.02742" target="_blank" rel="noopener noreferrer">Brian Randell — Fifty Years of Software Engineering<span class="sr-only"> (abre em nova aba)</span></a></p>
+            </div>
+          </li>
+
+          <li class="milestone" id="marco-6">
+            <div class="milestone__mark" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><circle cx="20" cy="22" r="8"/><circle cx="44" cy="22" r="8"/><circle cx="32" cy="46" r="8"/><path d="M26 28l3 11M38 28l-3 11M28 22h8"/></svg>
+            </div>
+            <div class="milestone__body">
+              <p class="milestone__period">Anos 1960 a 1990</p>
+              <h3>Programação estruturada e orientada a objetos</h3>
+              <p>A programação estruturada defendeu programas organizados em blocos claros e previsíveis, ideia associada a Dijkstra. Depois, a orientação a objetos propôs organizar o software em “objetos” que reúnem dados e comportamentos, facilitando a reutilização e a manutenção de sistemas grandes.</p>
+              <button class="milestone__more" type="button" aria-expanded="false" aria-controls="mais-6">Por que importa</button>
+              <p class="milestone__extra" id="mais-6" hidden>Ambas as ideias buscam o mesmo objetivo: código que outras pessoas consigam entender, testar e modificar.</p>
+              <p class="source">Fonte: <a href="https://amturing.acm.org/award_winners/dijkstra_1053701" target="_blank" rel="noopener noreferrer">ACM — Edsger W. Dijkstra, Prêmio Turing<span class="sr-only"> (abre em nova aba)</span></a></p>
+            </div>
+          </li>
+
+          <li class="milestone" id="marco-7">
+            <div class="milestone__mark" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="20"/><path d="M12 32h40M32 12c-8 8-8 32 0 40M32 12c8 8 8 32 0 40"/></svg>
+            </div>
+            <div class="milestone__body">
+              <p class="milestone__period">1989 em diante</p>
+              <h3>A expansão da internet e da web</h3>
+              <p>Em 1989, Tim Berners-Lee propôs a World Wide Web no CERN. Em 1993, o CERN colocou o software da web em domínio público, o que ajudou a rede a se espalhar pelo mundo.</p>
+              <button class="milestone__more" type="button" aria-expanded="false" aria-controls="mais-7">Por que importa</button>
+              <p class="milestone__extra" id="mais-7" hidden>Sistemas deixaram de rodar só dentro de empresas e passaram a atender milhões de pessoas ao mesmo tempo.</p>
+              <p class="source">Fontes: <a href="https://home.cern/science/computing/the-birth-of-the-web/" target="_blank" rel="noopener noreferrer">CERN — The birth of the Web<span class="sr-only"> (abre em nova aba)</span></a> · <a href="https://home.cern/science/computing/the-birth-of-the-web/short-history-web/" target="_blank" rel="noopener noreferrer">CERN — A short history of the Web<span class="sr-only"> (abre em nova aba)</span></a></p>
+            </div>
+          </li>
+
+          <li class="milestone" id="marco-8">
+            <div class="milestone__mark" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><rect x="8" y="12" width="34" height="26" rx="3"/><rect x="40" y="22" width="16" height="30" rx="4"/><path d="M18 46h14M48 47h0"/></svg>
+            </div>
+            <div class="milestone__body">
+              <p class="milestone__period">Anos 2000 e 2010</p>
+              <h3>Sistemas web e aplicativos móveis</h3>
+              <p>Lojas, bancos e serviços públicos ganharam versões na web e, depois, em aplicativos para celular. O software passou a estar no bolso das pessoas, o tempo todo.</p>
+              <button class="milestone__more" type="button" aria-expanded="false" aria-controls="mais-8">Por que importa</button>
+              <p class="milestone__extra" id="mais-8" hidden>No Brasil, 65% dos usuários de internet acessavam a rede exclusivamente pelo celular em 2025, segundo a Brasscom. Projetar pensando no celular deixou de ser opção.</p>
+              <p class="source">Fonte: <a href="https://brasscom.org.br/wp-content/uploads/2026/05/BRI2-2026-001-Relatorio-Setorial-2025-versao-resumida-v5-SITE-2.pdf" target="_blank" rel="noopener noreferrer">Brasscom, Relatório Setorial 2025 (PDF)<span class="sr-only"> (abre em nova aba)</span></a></p>
+            </div>
+          </li>
+
+          <li class="milestone" id="marco-9">
+            <div class="milestone__mark" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><path d="M20 44h26a10 10 0 0 0 0-20 14 14 0 0 0-27-2 11 11 0 0 0 1 22z"/></svg>
+            </div>
+            <div class="milestone__body">
+              <p class="milestone__period">Anos 2000 até hoje</p>
+              <h3>Computação em nuvem</h3>
+              <p>Em vez de comprar e manter servidores próprios, empresas passaram a alugar capacidade de processamento e armazenamento sob demanda. Isso mudou a forma de projetar, implantar e escalar sistemas.</p>
+              <button class="milestone__more" type="button" aria-expanded="false" aria-controls="mais-9">Por que importa</button>
+              <p class="milestone__extra" id="mais-9" hidden>No Brasil, o segmento de nuvem movimentou R$ 85,0 bilhões em 2025, alta de 35,5% em relação a 2024, segundo a Brasscom.</p>
+              <p class="source">Fonte: <a href="https://brasscom.org.br/wp-content/uploads/2026/05/BRI2-2026-001-Relatorio-Setorial-2025-versao-resumida-v5-SITE-2.pdf" target="_blank" rel="noopener noreferrer">Brasscom, Relatório Setorial 2025 (PDF)<span class="sr-only"> (abre em nova aba)</span></a></p>
+            </div>
+          </li>
+
+          <li class="milestone" id="marco-10">
+            <div class="milestone__mark" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><path d="M14 32c0-7 5-12 11-12 10 0 14 24 25 24 6 0 10-5 10-12s-4-12-10-12c-11 0-15 24-25 24-6 0-11-5-11-12z"/></svg>
+            </div>
+            <div class="milestone__body">
+              <p class="milestone__period">Anos 2010 até hoje</p>
+              <h3>DevOps, automação e inteligência artificial</h3>
+              <p>Equipes de desenvolvimento e de operação passaram a trabalhar juntas, com testes, integração e publicação automatizados. Mais recentemente, ferramentas de inteligência artificial começaram a apoiar tarefas como escrever, revisar e testar código, o que exige ainda mais atenção à qualidade e à segurança.</p>
+              <button class="milestone__more" type="button" aria-expanded="false" aria-controls="mais-10">Por que importa</button>
+              <p class="milestone__extra" id="mais-10" hidden>A Brasscom projeta investimentos de R$ 736,6 bilhões em inteligência artificial no Brasil entre 2026 e 2029. É uma projeção, não um resultado.</p>
+              <p class="source">Fonte: <a href="https://brasscom.org.br/wp-content/uploads/2026/05/BRI2-2026-001-Relatorio-Setorial-2025-versao-resumida-v5-SITE-2.pdf" target="_blank" rel="noopener noreferrer">Brasscom, Relatório Setorial 2025 (PDF)<span class="sr-only"> (abre em nova aba)</span></a></p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <nav class="page-next container" aria-label="Próxima página">
+      <a href="../pages/areas.html"><span class="page-next__label">Próxima página</span><span class="page-next__title">Áreas de atuação <span aria-hidden="true">→</span></span></a>
+    </nav>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__about">
+          <a class="brand brand--footer" href="../index.html">
+            <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect x="1.5" y="1.5" width="29" height="29" rx="9" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 11l-5 5 5 5M20 11l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="16" r="2.2" fill="var(--sage-600)"/></svg>
+            <span class="brand__name">Engenharia <em>de Software</em></span>
+          </a>
+          <p class="site-footer__slogan">Código que transforma ideias em soluções.</p>
+          <p class="site-footer__note">Projeto escolar desenvolvido para a Feira de Profissões.</p>
+        </div>
+        <nav class="site-footer__nav" aria-label="Páginas do site">
+          <p class="eyebrow">Páginas</p>
+          <ul>
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="../pages/profissao.html">Profissão</a></li>
+            <li><a href="../pages/historia.html">História</a></li>
+            <li><a href="../pages/areas.html">Áreas</a></li>
+            <li><a href="../pages/desenvolvimento.html">Como se constrói</a></li>
+            <li><a href="../pages/formacao.html">Formação</a></li>
+            <li><a href="../pages/mercado.html">Mercado</a></li>
+            <li><a href="../pages/stand.html">Stand</a></li>
+            <li><a href="../pages/creditos.html">Créditos</a></li>
+          </ul>
+        </nav>
+        <div class="site-footer__sources">
+          <p class="eyebrow">Sobre os dados</p>
+          <p>Todas as estatísticas indicam fonte, período e metodologia. A lista completa está em <a href="../pages/creditos.html">Créditos e referências</a>.</p>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <p>Conteúdo revisado em 11/11/2026.</p>
+        <a class="site-footer__top" href="#topo">Voltar ao topo <span aria-hidden="true">↑</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" aria-label="Voltar ao topo da página" hidden>
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+  </button>
+
+</body>
+</html>

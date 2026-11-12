@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Áreas de atuação · Engenharia de Software</title>
+  <meta name="description" content="Dez áreas de atuação da Engenharia de Software, com explicações e exemplos de aplicação.">
+  <meta name="theme-color" content="#f7f4ec">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+  <!-- Fontes gratuitas (Google Fonts). Sem internet, o CSS usa fontes de reserva. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&amp;family=Instrument+Serif:ital@0;1&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="../js/navigation.js" defer></script>
+  <script src="../js/main.js" defer></script>
+  <script src="../js/interactions.js" defer></script>
+</head>
+<body class="page page--areas">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header" id="topo">
+    <div class="container site-header__inner">
+      <a class="brand" href="../index.html">
+        <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect x="1.5" y="1.5" width="29" height="29" rx="9" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 11l-5 5 5 5M20 11l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="16" r="2.2" fill="var(--sage-600)"/></svg>
+        <span class="brand__name">Engenharia <em>de Software</em></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle__icon" aria-hidden="true"></span>
+        <span class="nav-toggle__text">Menu</span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
+        <ul class="site-nav__list">
+          <li class="site-nav__home"><a href="../index.html">Início</a></li>
+          <li><a href="../pages/profissao.html">Profissão</a></li>
+          <li><a href="../pages/historia.html">História</a></li>
+          <li><a href="../pages/areas.html" aria-current="page">Áreas</a></li>
+          <li><a href="../pages/desenvolvimento.html">Como se constrói</a></li>
+          <li><a href="../pages/formacao.html">Formação</a></li>
+          <li><a href="../pages/mercado.html">Mercado</a></li>
+          <li><a href="../pages/stand.html">Stand</a></li>
+          <li><a href="../pages/creditos.html">Créditos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <header class="page-head">
+      <div class="container narrow">
+        <p class="eyebrow">Áreas de atuação</p>
+        <h1 class="page-head__title">Dez caminhos, um mesmo <em>cuidado</em></h1>
+        <p class="page-head__lede">Cada área tem ferramentas e desafios próprios, mas todas compartilham o mesmo compromisso com qualidade. Estas são dez áreas frequentes, e não a lista completa de possibilidades.</p>
+      </div>
+    </header>
+
+    <section class="section section--tight" aria-labelledby="filtro-title">
+      <div class="container">
+        <div class="filter" data-filter>
+          <h2 id="filtro-title" class="filter__title">Filtrar por foco</h2>
+          <div class="filter__buttons" role="group" aria-labelledby="filtro-title">
+            <button type="button" class="chip" data-filter-value="todas" aria-pressed="true">Todas</button>
+            <button type="button" class="chip" data-filter-value="produto" aria-pressed="false">Produto e interface</button>
+            <button type="button" class="chip" data-filter-value="sistemas" aria-pressed="false">Sistemas e infraestrutura</button>
+            <button type="button" class="chip" data-filter-value="dados" aria-pressed="false">Dados e IA</button>
+            <button type="button" class="chip" data-filter-value="qualidade" aria-pressed="false">Qualidade e segurança</button>
+          </div>
+          <p class="filter__status" aria-live="polite" data-filter-status>Mostrando 10 áreas.</p>
+        </div>
+
+        <ol class="area-list" data-filter-list>
+          <li class="area" id="frontend" data-group="produto" style="--tone: var(--petrol)">
+            <div class="area__glyph" aria-hidden="true"><svg viewBox="0 0 64 64"><rect x="8" y="12" width="48" height="40" rx="5"/><path d="M8 22h48M15 17h0M20 17h0"/><rect x="15" y="29" width="16" height="16" rx="2"/><path d="M37 31h12M37 37h12M37 43h8"/></svg></div>
+            <div class="area__text">
+              <p class="area__no">01</p>
+              <h3>Frontend</h3>
+              <p>Constrói a parte do sistema que as pessoas veem e usam no navegador: telas, formulários e navegação, com atenção a usabilidade, acessibilidade e desempenho.</p>
+              <p class="area__examples"><span>Exemplos</span> páginas de matrícula, painéis de atendimento, lojas virtuais.</p>
+            </div>
+          </li>
+
+          <li class="area" id="backend" data-group="sistemas" style="--tone: var(--sage-700)">
+            <div class="area__glyph" aria-hidden="true"><svg viewBox="0 0 64 64"><rect x="12" y="10" width="40" height="12" rx="3"/><rect x="12" y="26" width="40" height="12" rx="3"/><rect x="12" y="42" width="40" height="12" rx="3"/><path d="M18 16h0M18 32h0M18 48h0"/></svg></div>
+            <div class="area__text">
+              <p class="area__no">02</p>
+              <h3>Backend</h3>
+              <p>Cuida das regras de negócio, do armazenamento de dados e dos serviços que funcionam “por trás” das telas, como autenticação, cálculos e integrações entre sistemas.</p>
+              <p class="area__examples"><span>Exemplos</span> processamento de pagamentos, emissão de boletos, APIs de agendamento.</p>
+            </div>
+          </li>
+
+          <li class="area" id="mobile" data-group="produto" style="--tone: var(--petrol)">
+            <div class="area__glyph" aria-hidden="true"><svg viewBox="0 0 64 64"><rect x="20" y="6" width="24" height="52" rx="6"/><path d="M28 12h8M32 50h0"/><path d="M26 22h12M26 28h12M26 34h7"/></svg></div>
+            <div class="area__text">
+              <p class="area__no">03</p>
+              <h3>Desenvolvimento mobile</h3>
+              <p>Cria aplicativos para celulares e tablets, lidando com telas pequenas, bateria, conexão instável e recursos do aparelho, como câmera e localização.</p>
+              <p class="area__examples"><span>Exemplos</span> aplicativos de banco, transporte por aplicativo, carteira de vacinação digital.</p>
+            </div>
+          </li>
+
+          <li class="area" id="ia" data-group="dados" style="--tone: var(--sage-700)">
+            <div class="area__glyph" aria-hidden="true"><svg viewBox="0 0 64 64"><circle cx="14" cy="20" r="4"/><circle cx="14" cy="44" r="4"/><circle cx="32" cy="14" r="4"/><circle cx="32" cy="32" r="4"/><circle cx="32" cy="50" r="4"/><circle cx="50" cy="32" r="4"/><path d="M18 20l10-5M18 20l10 11M18 44l10-11M18 44l10 5M36 14l10 16M36 32h10M36 50l10-16"/></svg></div>
+            <div class="area__text">
+              <p class="area__no">04</p>
+              <h3>Inteligência artificial e machine learning</h3>
+              <p>Desenvolve sistemas que aprendem padrões a partir de dados para classificar, prever ou gerar conteúdo, e avalia se esses resultados são corretos, justos e seguros.</p>
+              <p class="area__examples"><span>Exemplos</span> detecção de fraudes, recomendação de conteúdo, apoio à triagem de imagens médicas.</p>
+            </div>
+          </li>
+
+          <li class="area" id="dados" data-group="dados" style="--tone: var(--grey-green-700)">
+            <div class="area__glyph" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M10 54h44M16 54V38M26 54V26M36 54V32M46 54V16"/></svg></div>
+            <div class="area__text">
+              <p class="area__no">05</p>
+              <h3>Ciência e engenharia de dados</h3>
+              <p>Organiza a coleta, o armazenamento e a qualidade dos dados (engenharia) e os analisa para gerar informações úteis à tomada de decisão (ciência).</p>
+              <p class="area__examples"><span>Exemplos</span> painéis de indicadores de saúde pública, previsão de demanda, análise de desempenho escolar.</p>
+            </div>
+          </li>
+
+          <li class="area" id="seguranca" data-group="qualidade" style="--tone: var(--petrol)">
+            <div class="area__glyph" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M32 8l20 8v14c0 13-9 22-20 26-11-4-20-13-20-26V16z"/><path d="M24 32l6 6 11-12"/></svg></div>
+            <div class="area__text">
+              <p class="area__no">06</p>
+              <h3>Cibersegurança</h3>
+              <p>Protege sistemas, dados e pessoas contra acessos indevidos e ataques, desde o projeto do software até a resposta a incidentes.</p>
+              <p class="area__examples"><span>Exemplos</span> controle de acesso, proteção de dados pessoais, testes de invasão autorizados.</p>
+            </div>
+          </li>
+
+          <li class="area" id="cloud" data-group="sistemas" style="--tone: var(--sage-700)">
+            <div class="area__glyph" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M20 46h26a10 10 0 0 0 0-20 14 14 0 0 0-27-2 11 11 0 0 0 1 22z"/><path d="M32 30v12M26 36l6-6 6 6"/></svg></div>
+            <div class="area__text">
+              <p class="area__no">07</p>
+              <h3>Cloud computing</h3>
+              <p>Projeta e opera sistemas que usam recursos de computação em nuvem, que podem crescer ou diminuir conforme o uso e ser contratados sob demanda.</p>
+              <p class="area__examples"><span>Exemplos</span> sites que suportam picos de acesso, armazenamento de arquivos, serviços de vídeo.</p>
+            </div>
+          </li>
+
+          <li class="area" id="devops" data-group="sistemas" style="--tone: var(--grey-green-700)">
+            <div class="area__glyph" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M10 32c0-7 5-12 11-12 10 0 12 24 22 24 6 0 11-5 11-12s-5-12-11-12c-10 0-12 24-22 24-6 0-11-5-11-12z"/></svg></div>
+            <div class="area__text">
+              <p class="area__no">08</p>
+              <h3>DevOps e infraestrutura</h3>
+              <p>Automatiza a integração, os testes e a publicação de novas versões e cuida dos servidores, redes e ambientes em que o software roda.</p>
+              <p class="area__examples"><span>Exemplos</span> esteiras de integração contínua, monitoramento de sistemas, infraestrutura como código.</p>
+            </div>
+          </li>
+
+          <li class="area" id="qualidade" data-group="qualidade" style="--tone: var(--sage-700)">
+            <div class="area__glyph" aria-hidden="true"><svg viewBox="0 0 64 64"><rect x="12" y="10" width="40" height="44" rx="5"/><path d="M20 24l4 4 7-8M20 40l4 4 7-8M36 25h9M36 41h9"/></svg></div>
+            <div class="area__text">
+              <p class="area__no">09</p>
+              <h3>Qualidade de software e testes</h3>
+              <p>Planeja e executa testes manuais e automatizados, define critérios de qualidade e ajuda a equipe a encontrar problemas antes que cheguem às pessoas usuárias.</p>
+              <p class="area__examples"><span>Exemplos</span> testes automatizados de regras de cálculo, testes de acessibilidade, testes de carga.</p>
+            </div>
+          </li>
+
+          <li class="area" id="arquitetura" data-group="sistemas" style="--tone: var(--petrol)">
+            <div class="area__glyph" aria-hidden="true"><svg viewBox="0 0 64 64"><rect x="24" y="6" width="16" height="12" rx="3"/><rect x="6" y="40" width="16" height="12" rx="3"/><rect x="24" y="40" width="16" height="12" rx="3"/><rect x="42" y="40" width="16" height="12" rx="3"/><path d="M32 18v10M14 40v-6h36v6M32 28v12"/></svg></div>
+            <div class="area__text">
+              <p class="area__no">10</p>
+              <h3>Arquitetura de software</h3>
+              <p>Define a estrutura geral de um sistema: em quais partes ele se divide, como elas se comunicam e quais tecnologias usar, equilibrando custo, desempenho, segurança e facilidade de manutenção.</p>
+              <p class="area__examples"><span>Exemplos</span> divisão de um sistema em serviços, escolha de bancos de dados, planos de evolução de sistemas antigos.</p>
+            </div>
+          </li>
+        </ol>
+
+        <aside class="note note--block reveal" aria-label="Outras possibilidades">
+          <span class="note__tag">outras possibilidades</span>
+          <p>Além dessas áreas, há caminhos como experiência do usuário (UX), desenvolvimento de jogos, sistemas embarcados, gestão de produtos digitais, pesquisa acadêmica e docência. Muitas pessoas também transitam entre áreas ao longo da carreira.</p>
+        </aside>
+      </div>
+    </section>
+
+    <nav class="page-next container" aria-label="Próxima página">
+      <a href="../pages/desenvolvimento.html"><span class="page-next__label">Próxima página</span><span class="page-next__title">Como um software é construído <span aria-hidden="true">→</span></span></a>
+    </nav>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__about">
+          <a class="brand brand--footer" href="../index.html">
+            <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect x="1.5" y="1.5" width="29" height="29" rx="9" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 11l-5 5 5 5M20 11l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="16" r="2.2" fill="var(--sage-600)"/></svg>
+            <span class="brand__name">Engenharia <em>de Software</em></span>
+          </a>
+          <p class="site-footer__slogan">Código que transforma ideias em soluções.</p>
+          <p class="site-footer__note">Projeto escolar desenvolvido para a Feira de Profissões.</p>
+        </div>
+        <nav class="site-footer__nav" aria-label="Páginas do site">
+          <p class="eyebrow">Páginas</p>
+          <ul>
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="../pages/profissao.html">Profissão</a></li>
+            <li><a href="../pages/historia.html">História</a></li>
+            <li><a href="../pages/areas.html">Áreas</a></li>
+            <li><a href="../pages/desenvolvimento.html">Como se constrói</a></li>
+            <li><a href="../pages/formacao.html">Formação</a></li>
+            <li><a href="../pages/mercado.html">Mercado</a></li>
+            <li><a href="../pages/stand.html">Stand</a></li>
+            <li><a href="../pages/creditos.html">Créditos</a></li>
+          </ul>
+        </nav>
+        <div class="site-footer__sources">
+          <p class="eyebrow">Sobre os dados</p>
+          <p>Todas as estatísticas indicam fonte, período e metodologia. A lista completa está em <a href="../pages/creditos.html">Créditos e referências</a>.</p>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <p>Conteúdo revisado em 11/11/2026.</p>
+        <a class="site-footer__top" href="#topo">Voltar ao topo <span aria-hidden="true">↑</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" aria-label="Voltar ao topo da página" hidden>
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+  </button>
+
+</body>
+</html>

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Como um software é construído · Engenharia de Software</title>
+  <meta name="description" content="O ciclo de vida do software em oito etapas, com um exemplo didático e interativo.">
+  <meta name="theme-color" content="#f7f4ec">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+  <!-- Fontes gratuitas (Google Fonts). Sem internet, o CSS usa fontes de reserva. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&amp;family=Instrument+Serif:ital@0;1&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="../js/navigation.js" defer></script>
+  <script src="../js/main.js" defer></script>
+  <script src="../js/interactions.js" defer></script>
+</head>
+<body class="page page--desenvolvimento">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header" id="topo">
+    <div class="container site-header__inner">
+      <a class="brand" href="../index.html">
+        <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect x="1.5" y="1.5" width="29" height="29" rx="9" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 11l-5 5 5 5M20 11l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="16" r="2.2" fill="var(--sage-600)"/></svg>
+        <span class="brand__name">Engenharia <em>de Software</em></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle__icon" aria-hidden="true"></span>
+        <span class="nav-toggle__text">Menu</span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
+        <ul class="site-nav__list">
+          <li class="site-nav__home"><a href="../index.html">Início</a></li>
+          <li><a href="../pages/profissao.html">Profissão</a></li>
+          <li><a href="../pages/historia.html">História</a></li>
+          <li><a href="../pages/areas.html">Áreas</a></li>
+          <li><a href="../pages/desenvolvimento.html" aria-current="page">Como se constrói</a></li>
+          <li><a href="../pages/formacao.html">Formação</a></li>
+          <li><a href="../pages/mercado.html">Mercado</a></li>
+          <li><a href="../pages/stand.html">Stand</a></li>
+          <li><a href="../pages/creditos.html">Créditos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <header class="page-head">
+      <div class="container narrow">
+        <p class="eyebrow">Como um software é construído</p>
+        <h1 class="page-head__title">Da ideia ao produto, <em>uma etapa de cada vez</em></h1>
+        <p class="page-head__lede">O ciclo de vida do software organiza o trabalho em oito etapas. Na prática, elas se repetem em ciclos curtos: cada nova versão passa de novo por requisitos, código, testes e implantação.</p>
+      </div>
+    </header>
+
+    <section class="section section--tight" aria-labelledby="exemplo-title">
+      <div class="container narrow">
+        <div class="disclaimer" role="note">
+          <p class="disclaimer__tag">Exemplo fictício e didático</p>
+          <h2 id="exemplo-title" class="h3">“Monitoria Fácil”: um aplicativo imaginário para agendar monitorias na escola</h2>
+          <p>Este exemplo foi criado só para explicar o processo. <strong>Não é um projeto desenvolvido pela equipe</strong> e não representa uma escola real. As etapas 5 a 7 têm partes interativas que funcionam de verdade no seu navegador.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight" aria-labelledby="ciclo-title">
+      <div class="container">
+        <h2 id="ciclo-title" class="sr-only">O ciclo em oito etapas</h2>
+        <div class="lifecycle" data-lifecycle>
+          <div class="lifecycle__nav" role="tablist" aria-label="Etapas do ciclo de vida do software">
+            <button class="lifecycle__tab" type="button" role="tab" id="lc-tab-1" aria-controls="lc-1" aria-selected="true"><span class="lifecycle__n">1</span><span class="lifecycle__label">Problema</span></button>
+            <button class="lifecycle__tab" type="button" role="tab" id="lc-tab-2" aria-controls="lc-2" aria-selected="false" tabindex="-1"><span class="lifecycle__n">2</span><span class="lifecycle__label">Requisitos</span></button>
+            <button class="lifecycle__tab" type="button" role="tab" id="lc-tab-3" aria-controls="lc-3" aria-selected="false" tabindex="-1"><span class="lifecycle__n">3</span><span class="lifecycle__label">Planejamento</span></button>
+            <button class="lifecycle__tab" type="button" role="tab" id="lc-tab-4" aria-controls="lc-4" aria-selected="false" tabindex="-1"><span class="lifecycle__n">4</span><span class="lifecycle__label">Arquitetura</span></button>
+            <button class="lifecycle__tab" type="button" role="tab" id="lc-tab-5" aria-controls="lc-5" aria-selected="false" tabindex="-1"><span class="lifecycle__n">5</span><span class="lifecycle__label">Desenvolvimento</span></button>
+            <button class="lifecycle__tab" type="button" role="tab" id="lc-tab-6" aria-controls="lc-6" aria-selected="false" tabindex="-1"><span class="lifecycle__n">6</span><span class="lifecycle__label">Testes</span></button>
+            <button class="lifecycle__tab" type="button" role="tab" id="lc-tab-7" aria-controls="lc-7" aria-selected="false" tabindex="-1"><span class="lifecycle__n">7</span><span class="lifecycle__label">Implantação</span></button>
+            <button class="lifecycle__tab" type="button" role="tab" id="lc-tab-8" aria-controls="lc-8" aria-selected="false" tabindex="-1"><span class="lifecycle__n">8</span><span class="lifecycle__label">Manutenção</span></button>
+          </div>
+
+          <!-- 1 -->
+          <section class="lc-panel" role="tabpanel" id="lc-1" aria-labelledby="lc-tab-1" tabindex="0">
+            <div class="lc-panel__role">
+              <p class="lc-panel__step">Etapa 1 de 8</p>
+              <h3>Identificação do problema</h3>
+              <p><strong>Papel da engenharia:</strong> entender a situação real antes de pensar em tecnologia. Quem é afetado? O que acontece hoje? Como saberemos que o problema foi resolvido?</p>
+            </div>
+            <div class="lc-panel__example">
+              <p class="example-tag">No exemplo</p>
+              <p>Na escola imaginária, os alunos não sabem quando há monitores disponíveis, e os agendamentos feitos em papel geram conflitos: às vezes, dois alunos marcam o mesmo horário com o mesmo monitor.</p>
+              <p class="artifact"><span class="artifact__label">Objetivo</span> Permitir que o aluno veja e reserve horários livres de monitoria sem conflitos.</p>
+            </div>
+          </section>
+
+          <!-- 2 -->
+          <section class="lc-panel" role="tabpanel" id="lc-2" aria-labelledby="lc-tab-2" tabindex="0">
+            <div class="lc-panel__role">
+              <p class="lc-panel__step">Etapa 2 de 8</p>
+              <h3>Levantamento de requisitos</h3>
+              <p><strong>Papel da engenharia:</strong> transformar necessidades em requisitos claros e verificáveis. Requisitos funcionais dizem o que o sistema faz; não funcionais dizem como ele deve se comportar.</p>
+            </div>
+            <div class="lc-panel__example">
+              <p class="example-tag">No exemplo</p>
+              <ul class="req-list">
+                <li><code>RF1</code> O aluno escolhe a disciplina, o dia e o horário.</li>
+                <li><code>RF2</code> Cada disciplina tem um monitor; não pode haver duas reservas da mesma disciplina no mesmo dia e horário.</li>
+                <li><code>RF3</code> Atendimentos só de segunda a sexta, com início entre 13h e 16h (o último termina às 17h).</li>
+                <li><code>RF4</code> O aluno pode cancelar uma reserva.</li>
+                <li><code>RNF1</code> Funcionar bem no celular e ser acessível pelo teclado.</li>
+                <li><code>RNF2</code> Mostrar mensagens claras quando algo não for possível.</li>
+                <li><code>RNF3</code> Coletar o mínimo possível de dados pessoais.</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- 3 -->
+          <section class="lc-panel" role="tabpanel" id="lc-3" aria-labelledby="lc-tab-3" tabindex="0">
+            <div class="lc-panel__role">
+              <p class="lc-panel__step">Etapa 3 de 8</p>
+              <h3>Planejamento</h3>
+              <p><strong>Papel da engenharia:</strong> priorizar o que traz mais valor primeiro, dividir o trabalho em entregas pequenas, estimar esforço e prever riscos.</p>
+            </div>
+            <div class="lc-panel__example">
+              <p class="example-tag">No exemplo</p>
+              <div class="plan">
+                <div class="plan__col"><p class="plan__title">Versão 1</p><p>RF1, RF2, RF3 e RNF2: reservar sem conflitos.</p></div>
+                <div class="plan__col"><p class="plan__title">Versão 2</p><p>RF4: cancelar reservas.</p></div>
+                <div class="plan__col"><p class="plan__title">Risco</p><p>Regras de horário mal entendidas. Resposta: escrever testes para cada regra.</p></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 4 -->
+          <section class="lc-panel" role="tabpanel" id="lc-4" aria-labelledby="lc-tab-4" tabindex="0">
+            <div class="lc-panel__role">
+              <p class="lc-panel__step">Etapa 4 de 8</p>
+              <h3>Arquitetura e design</h3>
+              <p><strong>Papel da engenharia:</strong> decidir como dividir o sistema em partes com responsabilidades claras, para que ele seja fácil de testar, modificar e ampliar.</p>
+            </div>
+            <div class="lc-panel__example">
+              <p class="example-tag">No exemplo</p>
+              <svg class="arch" viewBox="0 0 420 150" role="img" aria-labelledby="arch-title">
+                <title id="arch-title">Arquitetura do exemplo: a interface envia o pedido para as regras de agendamento, que consultam e atualizam a agenda.</title>
+                <rect x="6" y="50" width="110" height="50" rx="12"/><text x="61" y="80">Interface</text>
+                <rect x="155" y="50" width="120" height="50" rx="12" class="arch__core"/><text x="215" y="80">Regras</text>
+                <rect x="314" y="50" width="100" height="50" rx="12"/><text x="364" y="80">Agenda</text>
+                <path d="M116 75h39M275 75h39"/><path d="M149 71l6 4-6 4M308 71l6 4-6 4" class="arch__arrow"/>
+                <text x="215" y="128" class="arch__note">testáveis sem a interface</text>
+              </svg>
+              <p>Decisão de design: as <strong>regras de agendamento</strong> ficam separadas da interface. Assim, podem ser testadas automaticamente, como você verá na etapa 6.</p>
+            </div>
+          </section>
+
+          <!-- 5 -->
+          <section class="lc-panel" role="tabpanel" id="lc-5" aria-labelledby="lc-tab-5" tabindex="0">
+            <div class="lc-panel__role">
+              <p class="lc-panel__step">Etapa 5 de 8</p>
+              <h3>Desenvolvimento</h3>
+              <p><strong>Papel da engenharia:</strong> escrever código claro, que siga os requisitos, seja revisado por colegas e fique registrado em controle de versão.</p>
+<pre class="code-block" aria-label="Trecho de código da regra de agendamento"><code><span class="c">// RF2 e RF3: regras de agendamento</span>
+<span class="k">function</span> <span class="f">validarAgendamento</span>(agenda, pedido) {
+  <span class="k">if</span> (!pedido.disciplina) <span class="k">return</span> <span class="f">erro</span>(<span class="s">'Escolha a disciplina.'</span>);
+  <span class="k">if</span> (!DIAS_UTEIS.<span class="f">includes</span>(pedido.dia)) <span class="k">return</span> <span class="f">erro</span>(<span class="s">'Só de segunda a sexta.'</span>);
+  <span class="k">if</span> (pedido.hora &lt; <span class="n">13</span> || pedido.hora &gt; <span class="n">16</span>) <span class="k">return</span> <span class="f">erro</span>(<span class="s">'Início entre 13h e 16h.'</span>);
+  <span class="k">if</span> (agenda.<span class="f">some</span>(r =&gt; <span class="f">mesmoHorario</span>(r, pedido))) <span class="k">return</span> <span class="f">erro</span>(<span class="s">'Horário já reservado.'</span>);
+  <span class="k">return</span> { ok: <span class="k">true</span> };
+}</code></pre>
+            </div>
+            <div class="lc-panel__example">
+              <p class="example-tag">Experimente: este formulário usa a regra acima</p>
+              <form class="demo-form" data-demo-form novalidate>
+                <div class="field">
+                  <label for="demo-disciplina">Disciplina</label>
+                  <select id="demo-disciplina" name="disciplina">
+                    <option value="">Escolha…</option>
+                    <option>Matemática</option>
+                    <option>Física</option>
+                    <option>Química</option>
+                    <option>Português</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="demo-dia">Dia</label>
+                  <select id="demo-dia" name="dia">
+                    <option value="segunda">Segunda</option>
+                    <option value="terça" selected>Terça</option>
+                    <option value="quarta">Quarta</option>
+                    <option value="quinta">Quinta</option>
+                    <option value="sexta">Sexta</option>
+                    <option value="sábado">Sábado</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="demo-hora">Início</label>
+                  <select id="demo-hora" name="hora">
+                    <option value="12">12h</option>
+                    <option value="13">13h</option>
+                    <option value="14" selected>14h</option>
+                    <option value="15">15h</option>
+                    <option value="16">16h</option>
+                    <option value="17">17h</option>
+                  </select>
+                </div>
+                <button class="btn btn--primary btn--small" type="submit">Reservar</button>
+              </form>
+              <p class="demo-result" data-demo-result role="status" aria-live="polite">Dica: Matemática na terça às 14h já está ocupada (reserva de exemplo). Tente reservar esse horário.</p>
+              <div class="demo-agenda">
+                <p class="demo-agenda__title">Agenda simulada</p>
+                <ul data-demo-agenda></ul>
+                <button class="btn btn--quiet btn--small" type="button" data-demo-reset>Restaurar agenda</button>
+              </div>
+            </div>
+          </section>
+
+          <!-- 6 -->
+          <section class="lc-panel" role="tabpanel" id="lc-6" aria-labelledby="lc-tab-6" tabindex="0">
+            <div class="lc-panel__role">
+              <p class="lc-panel__step">Etapa 6 de 8</p>
+              <h3>Testes</h3>
+              <p><strong>Papel da engenharia:</strong> verificar de forma sistemática se o sistema faz o que deve e recusa o que não deve. Testes automatizados rodam em segundos e avisam quando uma mudança quebra algo que funcionava.</p>
+              <label class="toggle">
+                <input type="checkbox" data-test-bug>
+                <span>Simular um erro no código (a regra passa a aceitar início às 17h)</span>
+              </label>
+            </div>
+            <div class="lc-panel__example">
+              <p class="example-tag">Testes automatizados da regra de agendamento</p>
+              <ol class="test-list" data-test-list>
+                <li data-test="1">Aceita Matemática, terça, 14h, em agenda vazia</li>
+                <li data-test="2">Recusa a mesma disciplina, dia e horário já reservados</li>
+                <li data-test="3">Aceita o mesmo horário em outra disciplina</li>
+                <li data-test="4">Recusa reserva no sábado</li>
+                <li data-test="5">Recusa início às 17h</li>
+                <li data-test="6">Recusa pedido sem disciplina</li>
+              </ol>
+              <button class="btn btn--primary btn--small" type="button" data-test-run>Executar testes</button>
+              <p class="test-summary" data-test-summary role="status" aria-live="polite">Os testes ainda não foram executados.</p>
+            </div>
+          </section>
+
+          <!-- 7 -->
+          <section class="lc-panel" role="tabpanel" id="lc-7" aria-labelledby="lc-tab-7" tabindex="0">
+            <div class="lc-panel__role">
+              <p class="lc-panel__step">Etapa 7 de 8</p>
+              <h3>Implantação</h3>
+              <p><strong>Papel da engenharia:</strong> publicar novas versões com segurança. Uma esteira automatizada só libera a publicação se todas as verificações passarem.</p>
+            </div>
+            <div class="lc-panel__example">
+              <p class="example-tag">Esteira de publicação do exemplo</p>
+              <ol class="pipeline" data-pipeline>
+                <li class="pipeline__step is-done"><span class="pipeline__dot" aria-hidden="true"></span>Código enviado</li>
+                <li class="pipeline__step" data-pipeline-tests><span class="pipeline__dot" aria-hidden="true"></span>Testes automatizados</li>
+                <li class="pipeline__step" data-pipeline-review><span class="pipeline__dot" aria-hidden="true"></span>Revisão por colega</li>
+                <li class="pipeline__step" data-pipeline-deploy><span class="pipeline__dot" aria-hidden="true"></span>Publicação</li>
+              </ol>
+              <p class="pipeline__status" data-pipeline-status role="status" aria-live="polite">Aguardando: execute os testes na etapa 6.</p>
+            </div>
+          </section>
+
+          <!-- 8 -->
+          <section class="lc-panel" role="tabpanel" id="lc-8" aria-labelledby="lc-tab-8" tabindex="0">
+            <div class="lc-panel__role">
+              <p class="lc-panel__step">Etapa 8 de 8</p>
+              <h3>Monitoramento e manutenção</h3>
+              <p><strong>Papel da engenharia:</strong> acompanhar o sistema em uso (erros, lentidão, retorno das pessoas), corrigir falhas, atualizar componentes e planejar melhorias.</p>
+            </div>
+            <div class="lc-panel__example">
+              <p class="example-tag">No exemplo</p>
+              <ul class="req-list">
+                <li><code>observar</code> mensagens de erro mais frequentes e horários mais procurados.</li>
+                <li><code>ouvir</code> alunos e monitores: um pedido imaginário seria permitir monitorias em grupo.</li>
+                <li><code>evoluir</code> o pedido vira um novo requisito, e o ciclo recomeça na etapa 2.</li>
+              </ul>
+              <p class="cycle-back"><span aria-hidden="true">↺</span> O software nunca está “pronto”: ele acompanha as mudanças nas necessidades das pessoas.</p>
+            </div>
+          </section>
+
+          <div class="lifecycle__controls">
+            <button class="btn btn--quiet btn--small" type="button" data-lc-prev><span aria-hidden="true">←</span> Anterior</button>
+            <p class="lifecycle__counter" aria-live="polite">Etapa <span data-lc-current>1</span> de 8</p>
+            <button class="btn btn--quiet btn--small" type="button" data-lc-next>Próxima <span aria-hidden="true">→</span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <nav class="page-next container" aria-label="Próxima página">
+      <a href="../pages/formacao.html"><span class="page-next__label">Próxima página</span><span class="page-next__title">Formação e carreira <span aria-hidden="true">→</span></span></a>
+    </nav>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__about">
+          <a class="brand brand--footer" href="../index.html">
+            <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect x="1.5" y="1.5" width="29" height="29" rx="9" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 11l-5 5 5 5M20 11l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="16" r="2.2" fill="var(--sage-600)"/></svg>
+            <span class="brand__name">Engenharia <em>de Software</em></span>
+          </a>
+          <p class="site-footer__slogan">Código que transforma ideias em soluções.</p>
+          <p class="site-footer__note">Projeto escolar desenvolvido para a Feira de Profissões.</p>
+        </div>
+        <nav class="site-footer__nav" aria-label="Páginas do site">
+          <p class="eyebrow">Páginas</p>
+          <ul>
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="../pages/profissao.html">Profissão</a></li>
+            <li><a href="../pages/historia.html">História</a></li>
+            <li><a href="../pages/areas.html">Áreas</a></li>
+            <li><a href="../pages/desenvolvimento.html">Como se constrói</a></li>
+            <li><a href="../pages/formacao.html">Formação</a></li>
+            <li><a href="../pages/mercado.html">Mercado</a></li>
+            <li><a href="../pages/stand.html">Stand</a></li>
+            <li><a href="../pages/creditos.html">Créditos</a></li>
+          </ul>
+        </nav>
+        <div class="site-footer__sources">
+          <p class="eyebrow">Sobre os dados</p>
+          <p>Todas as estatísticas indicam fonte, período e metodologia. A lista completa está em <a href="../pages/creditos.html">Créditos e referências</a>.</p>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <p>Conteúdo revisado em 11/11/2026.</p>
+        <a class="site-footer__top" href="#topo">Voltar ao topo <span aria-hidden="true">↑</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" aria-label="Voltar ao topo da página" hidden>
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+  </button>
+
+</body>
+</html>
